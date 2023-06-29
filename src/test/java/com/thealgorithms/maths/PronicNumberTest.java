@@ -1,34 +1,32 @@
 package com.thealgorithms.maths;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 public class PronicNumberTest {
 
     @Test
     void testForPronicNumber() {
-
-        //given
+        // given
         int number = 30;
 
-        //when
+        // when
         boolean result = PronicNumber.isPronic(number);
-        
-        //then
+
+        // then
         assertTrue(result);
     }
 
     @Test
     void testForNonPronicNumber() {
-        
-        //given
+        // given
         int number = 21;
 
-        //when
+        // when
         boolean result = PronicNumber.isPronic(number);
-        
-        //then
+
+        // then
         assertFalse(result);
     }
 }

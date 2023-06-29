@@ -10,6 +10,7 @@ import java.util.Set;
  * alphabet. Wikipedia: https://en.wikipedia.org/wiki/Alphabetical_order
  */
 public class CheckVowels {
+
     private static final Set<Character> VOWELS = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u'));
 
     /**

@@ -36,7 +36,7 @@ class QuickSort implements SortAlgorithm {
     }
 
     /**
-     * Ramdomize the array to avoid the basically ordered sequences
+     * Randomize the array to avoid the basically ordered sequences
      *
      * @param array The array to be sorted
      * @param left The first index of an array

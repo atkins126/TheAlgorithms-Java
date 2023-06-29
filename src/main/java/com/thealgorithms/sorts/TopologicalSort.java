@@ -14,54 +14,57 @@ import java.util.*;
  */
 public class TopologicalSort {
 
-     /*
+    /*
      * Enum to represent the colors for the depth first search
      * */
     private enum Color {
-        WHITE, GRAY, BLACK
+        WHITE,
+        GRAY,
+        BLACK,
     }
 
-     /*
+    /*
      * Class to represent vertices
      * */
     private static class Vertex {
+
         /*
-        * Name of vertex
-        * */
+         * Name of vertex
+         * */
         public final String label;
 
         /*
-        * Weight of vertex
-        * (more accurately defined as the time that a vertex has begun a visit in DFS)
-        * */
+         * Weight of vertex
+         * (more accurately defined as the time that a vertex has begun a visit in DFS)
+         * */
         public int weight;
 
         /*
-        * The time that the vertex has finished a visit in DFS
-        * */
+         * The time that the vertex has finished a visit in DFS
+         * */
         public int finished;
 
         /*
-        * π parent of the vertex
-        * */
+         * π parent of the vertex
+         * */
         public Vertex predecessor;
 
         /*
-        * Represents the category of visit in DFS
-        * */
+         * Represents the category of visit in DFS
+         * */
         public Color color = Color.WHITE;
 
         /*
-        * The array of names of descendant vertices
-        * */
+         * The array of names of descendant vertices
+         * */
         public final ArrayList<String> next = new ArrayList<>();
 
         public Vertex(String label) {
             this.label = label;
         }
-     }
+    }
 
-     /*
+    /*
      * Graph class uses the adjacency list representation
      * */
     static class Graph {
@@ -76,8 +79,7 @@ public class TopologicalSort {
          * */
         public void addEdge(String label, String... next) {
             adj.put(label, new Vertex(label));
-            if (!next[0].isEmpty())
-                Collections.addAll(adj.get(label).next, next);
+            if (!next[0].isEmpty()) Collections.addAll(adj.get(label).next, next);
         }
     }
 
@@ -86,7 +88,6 @@ public class TopologicalSort {
         public BackEdgeException(String backEdge) {
             super("This graph contains a cycle. No linear ordering is possible. " + backEdge);
         }
-
     }
 
     /*
@@ -157,4 +158,3 @@ public class TopologicalSort {
         return u.label;
     }
 }
-

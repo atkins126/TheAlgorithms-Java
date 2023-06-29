@@ -1,15 +1,14 @@
 package com.thealgorithms.sorts;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
+import java.util.Arrays;
+import org.junit.jupiter.api.Test;
 
 public class WiggleSortTest {
+
     @Test
-    void WiggleTestNumbersEven(){
+    void WiggleTestNumbersEven() {
         WiggleSort wiggleSort = new WiggleSort();
         Integer[] values = {1, 2, 3, 4};
         Integer[] result = {1, 4, 2, 3};
@@ -18,17 +17,16 @@ public class WiggleSortTest {
     }
 
     @Test
-    void WiggleTestNumbersOdd(){
+    void WiggleTestNumbersOdd() {
         WiggleSort wiggleSort = new WiggleSort();
         Integer[] values = {1, 2, 3, 4, 5};
         Integer[] result = {3, 5, 1, 4, 2};
         wiggleSort.sort(values);
         assertArrayEquals(values, result);
-
     }
 
     @Test
-    void WiggleTestNumbersOddDuplicates(){
+    void WiggleTestNumbersOddDuplicates() {
         WiggleSort wiggleSort = new WiggleSort();
         Integer[] values = {7, 2, 2, 2, 5};
         Integer[] result = {2, 7, 2, 5, 2};
@@ -37,7 +35,7 @@ public class WiggleSortTest {
     }
 
     @Test
-    void WiggleTestNumbersOddMultipleDuplicates(){
+    void WiggleTestNumbersOddMultipleDuplicates() {
         WiggleSort wiggleSort = new WiggleSort();
         Integer[] values = {1, 1, 2, 2, 5};
         Integer[] result = {2, 5, 1, 2, 1};
@@ -46,7 +44,7 @@ public class WiggleSortTest {
     }
 
     @Test
-    void WiggleTestNumbersEvenMultipleDuplicates(){
+    void WiggleTestNumbersEvenMultipleDuplicates() {
         WiggleSort wiggleSort = new WiggleSort();
         Integer[] values = {1, 1, 2, 2, 2, 5};
         Integer[] result = {2, 5, 1, 2, 1, 2};
@@ -56,7 +54,7 @@ public class WiggleSortTest {
     }
 
     @Test
-    void WiggleTestNumbersEvenDuplicates(){
+    void WiggleTestNumbersEvenDuplicates() {
         WiggleSort wiggleSort = new WiggleSort();
         Integer[] values = {1, 2, 4, 4};
         Integer[] result = {1, 4, 2, 4};
@@ -65,7 +63,7 @@ public class WiggleSortTest {
     }
 
     @Test
-    void WiggleTestStrings(){
+    void WiggleTestStrings() {
         WiggleSort wiggleSort = new WiggleSort();
         String[] values = {"a", "b", "d", "c"};
         String[] result = {"a", "d", "b", "c"};

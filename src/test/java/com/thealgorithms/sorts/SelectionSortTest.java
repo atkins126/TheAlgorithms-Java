@@ -1,8 +1,8 @@
 package com.thealgorithms.sorts;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 class SelectionSortTest {
 
@@ -12,7 +12,7 @@ class SelectionSortTest {
         Integer[] arr = {4, 23, 6, 78, 1, 54, 231, 9, 12};
         SelectionSort selectionSort = new SelectionSort();
 
-        assertArrayEquals(new Integer[]{1, 4, 6, 9, 12, 23, 54, 78, 231}, selectionSort.sort(arr));
+        assertArrayEquals(new Integer[] {1, 4, 6, 9, 12, 23, 54, 78, 231}, selectionSort.sort(arr));
     }
 
     @Test
@@ -21,7 +21,7 @@ class SelectionSortTest {
         String[] arr = {"c", "a", "e", "b", "d"};
         SelectionSort selectionSort = new SelectionSort();
 
-        assertArrayEquals(new String[]{"a", "b", "c", "d", "e"}, selectionSort.sort(arr));
+        assertArrayEquals(new String[] {"a", "b", "c", "d", "e"}, selectionSort.sort(arr));
     }
 
     @Test
@@ -30,6 +30,6 @@ class SelectionSortTest {
         Integer[] arr = {};
         SelectionSort selectionSort = new SelectionSort();
 
-        assertArrayEquals(new Integer[]{}, selectionSort.sort(arr));
+        assertArrayEquals(new Integer[] {}, selectionSort.sort(arr));
     }
 }

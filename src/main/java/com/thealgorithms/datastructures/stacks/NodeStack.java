@@ -63,7 +63,6 @@ public class NodeStack<Item> {
      * @param item : value to be put on the stack.
      */
     public void push(Item item) {
-
         NodeStack<Item> newNs = new NodeStack<Item>(item);
 
         if (this.isEmpty()) {
@@ -85,7 +84,6 @@ public class NodeStack<Item> {
      * @return item : value that is returned.
      */
     public Item pop() {
-
         Item item = (Item) NodeStack.head.getData();
 
         NodeStack.head.setHead(NodeStack.head.getPrevious());

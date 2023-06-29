@@ -7,17 +7,11 @@ public class CoinChange {
 
     // Driver Program
     public static void main(String[] args) {
-
         int amount = 12;
         int[] coins = {2, 4, 5};
 
-        System.out.println(
-                "Number of combinations of getting change for " + amount + " is: " + change(coins, amount));
-        System.out.println(
-                "Minimum number of coins required for amount :"
-                + amount
-                + " is: "
-                + minimumCoins(coins, amount));
+        System.out.println("Number of combinations of getting change for " + amount + " is: " + change(coins, amount));
+        System.out.println("Minimum number of coins required for amount :" + amount + " is: " + minimumCoins(coins, amount));
     }
 
     /**
@@ -29,7 +23,6 @@ public class CoinChange {
      * number of combinations of change
      */
     public static int change(int[] coins, int amount) {
-
         int[] combinations = new int[amount + 1];
         combinations[0] = 1;
 

@@ -1,9 +1,11 @@
 package com.thealgorithms.sorts;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Test;
+
 public class DutchNationalFlagSortTest {
+
     @Test
     /*
       1 will be used as intended middle.

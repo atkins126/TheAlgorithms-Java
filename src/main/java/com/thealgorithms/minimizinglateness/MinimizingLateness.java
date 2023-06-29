@@ -36,10 +36,9 @@ public class MinimizingLateness {
         int i = 0;
         while ((ch = in.readLine()) != null) {
             token = new StringTokenizer(ch, " ");
-            // Include the time required for the operation to be performed in the array and the time it
-            // should be completed.
-            array[i]
-                    = new Schedule(Integer.parseInt(token.nextToken()), Integer.parseInt(token.nextToken()));
+            // Include the time required for the operation to be performed in the array and the time
+            // it should be completed.
+            array[i] = new Schedule(Integer.parseInt(token.nextToken()), Integer.parseInt(token.nextToken()));
             i++;
             System.out.println(array[i - 1].t + " " + array[i - 1].d);
         }

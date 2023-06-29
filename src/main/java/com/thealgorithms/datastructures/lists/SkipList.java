@@ -190,22 +190,20 @@ public class SkipList<E extends Comparable<E>> {
 
         Collections.reverse(layers);
         String result = layers.stream()
-                .map(layer -> {
-                    StringBuilder acc = new StringBuilder();
-                    for (boolean b : layer) {
-                        if (b) {
-                            acc.append("[ ]");
-                        } else {
-                            acc.append("---");
-                        }
-                        acc.append(" ");
-                    }
-                    return acc.toString();
-                })
-                .collect(Collectors.joining("\n"));
-        String positions = IntStream.range(0, sizeWithHeader - 1)
-                .mapToObj(i -> String.format("%3d", i))
-                .collect(Collectors.joining(" "));
+                            .map(layer -> {
+                                StringBuilder acc = new StringBuilder();
+                                for (boolean b : layer) {
+                                    if (b) {
+                                        acc.append("[ ]");
+                                    } else {
+                                        acc.append("---");
+                                    }
+                                    acc.append(" ");
+                                }
+                                return acc.toString();
+                            })
+                            .collect(Collectors.joining("\n"));
+        String positions = IntStream.range(0, sizeWithHeader - 1).mapToObj(i -> String.format("%3d", i)).collect(Collectors.joining(" "));
 
         return result + String.format("%n H %s%n", positions);
     }

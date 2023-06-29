@@ -1,6 +1,5 @@
 package com.thealgorithms.datastructures.hashmap.hashing;
 
-
 import java.lang.Math;
 import java.util.Objects;
 
@@ -34,7 +33,8 @@ public class HashMapCuckooHashing {
     }
 
     /**
-     * The 2 Hash Functions takes a given key and finds an index based on its data, 2 distinctive ways to minimize collisions
+     * The 2 Hash Functions takes a given key and finds an index based on its data, 2 distinctive
+     * ways to minimize collisions
      *
      * @param key the desired key to be converted
      * @return int an index corresponding to the key
@@ -58,10 +58,10 @@ public class HashMapCuckooHashing {
     }
 
     /**
-     * inserts the key into the hash map by wrapping it as an Integer object, then uses while loop to insert new key
-     * if desired place is empty, return.
-     * if already occupied, continue while loop over the new key that has just been pushed out.
-     * if while loop continues more than Thresh, rehash table to new size, then push again.
+     * inserts the key into the hash map by wrapping it as an Integer object, then uses while loop
+     * to insert new key if desired place is empty, return. if already occupied, continue while loop
+     * over the new key that has just been pushed out. if while loop continues more than Thresh,
+     * rehash table to new size, then push again.
      *
      * @param key the desired key to be inserted in the hash map
      */
@@ -116,8 +116,8 @@ public class HashMapCuckooHashing {
     }
 
     /**
-     * creates new HashMapCuckooHashing object, then inserts each of the elements in the previous table to it with its new hash functions.
-     * then refers current array to new table.
+     * creates new HashMapCuckooHashing object, then inserts each of the elements in the previous
+     * table to it with its new hash functions. then refers current array to new table.
      *
      */
     public void reHashTableIncreasesTableSize() {
@@ -131,7 +131,6 @@ public class HashMapCuckooHashing {
         this.buckets = newT.buckets;
         this.thresh = (int) (Math.log(tableSize) / Math.log(2)) + 2;
     }
-
 
     /**
      * deletes a key from the hash map and adds an available placeholder
@@ -197,14 +196,15 @@ public class HashMapCuckooHashing {
             return hash;
         }
     }
+
     /**
      * checks if key is inside without any output other than returned boolean.
      *
      * @param key the desired key to be found
      * @return int the index where the key is located
      */
-    public boolean checkTableContainsKey(int key){
-        return  ((buckets[hashFunction1(key)] != null && buckets[hashFunction1(key)].equals(key)) || (buckets[hashFunction2(key)] != null && buckets[hashFunction2(key)] == key));
+    public boolean checkTableContainsKey(int key) {
+        return ((buckets[hashFunction1(key)] != null && buckets[hashFunction1(key)].equals(key)) || (buckets[hashFunction2(key)] != null && buckets[hashFunction2(key)] == key));
     }
 
     /**
@@ -250,5 +250,8 @@ public class HashMapCuckooHashing {
         }
         return response;
     }
-    public int getNumberOfKeysInTable(){return size;}
+
+    public int getNumberOfKeysInTable() {
+        return size;
+    }
 }

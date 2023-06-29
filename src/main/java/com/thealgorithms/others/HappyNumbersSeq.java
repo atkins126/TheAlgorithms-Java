@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class HappyNumbersSeq {
+
     private static final Set<Integer> CYCLE_NUMS = new HashSet<>(Arrays.asList(4, 16, 20, 37, 58, 145));
 
     public static void main(String[] args) {

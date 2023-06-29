@@ -3,6 +3,7 @@ package com.thealgorithms.searches;
 import java.util.Scanner;
 
 public class LinearSearchThread {
+
     public static void main(String[] args) {
         int[] list = new int[200];
         for (int j = 0; j < list.length; j++) {
@@ -36,6 +37,7 @@ public class LinearSearchThread {
 }
 
 class Searcher extends Thread {
+
     private final int[] arr;
     private final int left, right;
     private final int x;

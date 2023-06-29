@@ -84,7 +84,8 @@ public class NQueens {
         for (int rowIndex = 0; rowIndex < boardSize; rowIndex++) {
             columns[columnIndex] = rowIndex;
             if (isPlacedCorrectly(columns, rowIndex, columnIndex)) {
-                // If queen is placed successfully at rowIndex in column=columnIndex then try placing queen in next column
+                // If queen is placed successfully at rowIndex in column=columnIndex then try
+                // placing queen in next column
                 getSolution(boardSize, solutions, columns, columnIndex + 1);
             }
         }

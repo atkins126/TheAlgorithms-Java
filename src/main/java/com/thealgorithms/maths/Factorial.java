@@ -22,7 +22,7 @@ public class Factorial {
         }
         long factorial = 1;
         for (int i = 1; i <= n; factorial *= i, ++i)
-      ;
+            ;
         return factorial;
     }
 }

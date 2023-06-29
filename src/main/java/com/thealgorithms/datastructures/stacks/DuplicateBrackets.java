@@ -1,8 +1,9 @@
 package com.thealgorithms.datastructures.stacks;
 
 //  1. You are given a string exp representing an expression.
-// 2. Assume that the expression is balanced  i.e. the opening and closing brackets match with each other.
-// 3. But, some of the pair of brackets maybe extra/needless. 
+// 2. Assume that the expression is balanced  i.e. the opening and closing brackets match with each
+// other.
+// 3. But, some of the pair of brackets maybe extra/needless.
 // 4. You are required to print true if you detect extra brackets and false otherwise.
 // e.g.'
 // ((a + b) + (c + d)) -> false
@@ -25,7 +26,6 @@ public class DuplicateBrackets {
                     }
                     st.pop();
                 }
-
             } else {
                 st.push(ch);
             }
@@ -40,5 +40,4 @@ public class DuplicateBrackets {
         System.out.println(check(str));
         sc.close();
     }
-
 }

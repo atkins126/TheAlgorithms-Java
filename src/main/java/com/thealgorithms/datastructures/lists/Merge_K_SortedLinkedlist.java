@@ -30,7 +30,6 @@ public class Merge_K_SortedLinkedlist {
 
         // merging LinkedList
         while (!min.isEmpty()) {
-
             Node temp = min.poll();
             curr.next = temp;
             curr = temp;

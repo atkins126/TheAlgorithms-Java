@@ -1,6 +1,8 @@
 package com.thealgorithms.datastructures.stacks;
+
 import java.util.Arrays;
 import java.util.Stack;
+
 /*
     Given an array "input" you need to print the first grater element for each element.
     For a given element x of an array, the Next Grater element of that element is the
@@ -35,14 +37,13 @@ import java.util.Stack;
             popped elements.
         d. Finally, push the next in the stack.
 
-    3. If elements are left in stack after completing while loop then their Next Grater element is -1.
+    3. If elements are left in stack after completing while loop then their Next Grater element is
+   -1.
  */
 
-
 public class NextGraterElement {
- 
-    public static int[] findNextGreaterElements(int[] array) {
 
+    public static int[] findNextGreaterElements(int[] array) {
         if (array == null) {
             return array;
         }
@@ -60,9 +61,8 @@ public class NextGraterElement {
         return result;
     }
 
-    public static void main(String[] args)
-    {
-        int[] input = { 2, 7, 3, 5, 4, 6, 8 };
+    public static void main(String[] args) {
+        int[] input = {2, 7, 3, 5, 4, 6, 8};
         int[] result = findNextGreaterElements(input);
         System.out.println(Arrays.toString(result));
     }

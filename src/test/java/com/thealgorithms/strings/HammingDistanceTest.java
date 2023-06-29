@@ -1,11 +1,12 @@
 package com.thealgorithms.strings;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.Test;
+
 public class HammingDistanceTest {
+
     @Test
     void testHammingDistance() throws Exception {
         assertEquals(HammingDistance.calculateHammingDistance("", ""), 0);
